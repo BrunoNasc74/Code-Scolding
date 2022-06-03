@@ -3,3 +3,9 @@ body::before {
   content: '';
   height: 74px;
 }
+
+.error{
+  color: red;
+  display: block;
+  text-align: center;
+}

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Code Scolding - Inscreva-se agora em nossa lista de espara!</title>
 </head>
 <body>
@@ -49,20 +49,22 @@
                 </div>
                 <div>
                     <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email" />
-                    <span class="error"></span>
+                    <input type="text" name="email" id="email" />
+                    <span class="error error-email"></span>
                 </div>
                 <div>
                     <label for="rg">RG:</label>
                     <input type="text" name="rg" id="rg" />
+                    <span class="error error-rg"></span>
                 </div>
                 <div>
                     <label for="password">Senha:</label>
-                    <input id="password" name="password" placeholder=""type="password" inputmode="numeric" minlength="8" maxlength="12" size="8"/>
+                    <input id="password" name="password" type="password" inputmode="numeric" minlength="8" maxlength="12" size="8"/>
                 </div>
                 <div>
                     <label for="confirm_password">Confirme sua senha:</label>
                     <input id="confirm_password" type="password" inputmode="numeric" minlength="8" maxlength="12" size="8"/>
+                    <span class="error error-senha"></span>
                 </div>
                 <div>
                     <label>Cep:</label>
