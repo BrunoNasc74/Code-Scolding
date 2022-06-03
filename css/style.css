@@ -9,3 +9,58 @@ body::before {
   display: block;
   text-align: center;
 }
+
+.main-waitlist{
+  margin: auto;
+  padding-top: 30px;
+}
+
+.waitlist{
+  display: grid;
+  justify-items: center;
+}
+
+.text{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#form{
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 420px;
+  display: grid;
+  gap: 5px;
+}
+
+label {
+  padding-bottom: 5px;
+}
+
+input{
+  width: 100%;
+}
+
+.container{
+  display: flex;
+  gap: 10px;
+  padding: 0;
+}
+
+.mini-field{
+  width: 15%;
+}
+
+.large-field{
+  width: 85%;
+}
+
+.complement, .district{
+  width: 50%;
+}
+
+#btn{
+  margin: auto;
+  margin-top: 20px;
+}

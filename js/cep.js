@@ -16,7 +16,11 @@ if (!("erro" in conteudo)) {
 } else {
     //CEP não Encontrado.
     limpa_formulário_cep();
-    alert("CEP não encontrado.");
+    const inputCep = document.getElementById('cep')
+    const cepInvalido = document.querySelector('.error-cep')
+    cepInvalido.textContent = 'CEP inválido!';
+    inputCep.style.border = '2px solid red';
+
 }};
 
 function pesquisacep(valor) {

@@ -69,31 +69,34 @@
                 <div>
                     <label>Cep:</label>
                     <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);"/>
+                    <span class="error error-cep"></span>
                 </div>
-                <div>
-                    <label>Rua:</label>
-                    <input name="rua" type="text" id="rua" size="60"/>
-                </div>
-                <div>
-                    <div>
-                        <label>Número:</label>
-                        <input name="numero" type="text" id="numero"/>
+                <div class="container">  
+                    <div class="street large-field">
+                        <label>Rua:</label>
+                        <input name="rua" type="text" id="rua" size="60"/>
                     </div>
-                    <div>
+                    <div class="number mini-field">
+                        <label>Nº</label>
+                        <input name="numero" type="text" id="numero"/>
+                    </div>   
+                </div>
+                <div class="container">
+                    <div class="complement">
                         <label>Complemento:</label>
                         <input name="complemento" type="text" id="complemento"/>
                     </div>
-                </div>
-                <div>
-                    <div>
+                    <div class="district">
                         <label>Bairro:</label>
                         <input name="bairro" type="text" id="bairro" size="40" />
                     </div>
-                    <div>
+                </div>
+                <div class="container">
+                    <div class="city large-field">
                         <label>Cidade:</label>
                         <input name="cidade" type="text" id="cidade" size="40" />
                     </div>
-                    <div>
+                    <div class="state mini-field">
                         <label>Estado:</label>
                         <input name="uf" type="text" id="uf" size="2" />
                     </div>
