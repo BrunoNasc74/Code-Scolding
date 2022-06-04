@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Code Scolding - Inscreva-se agora em nossa lista de espara!</title>
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-md bg-dark navbar-dark py-3 fixed-top">
@@ -36,77 +38,161 @@
             </div>
         </nav>
     </header>
-    <main class="main-waitlist">
-        <section class="waitlist">
-            <div class="text">
-                <h1 class="title">Code Scolding</h1>
-                <p class="description">Inscreva-se em nossa lista de espera e seja o primeiro a ser avisado no dia do lançamento!</p>
+
+    <main>
+        <div class="container">
+            <div class="d-flex flex-column align-items-center mt-4">
+                <h1>Code Scolding</h1>
+                <p class="text-secondary text-center">Inscreva-se em nossa lista de espera e seja o primeiro a ser
+                    avisado
+                    no dia do
+                    lançamento!</p>
             </div>
-            <form method="get" action="." id="form">
-                <div>
-                    <label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="name" />
-                </div>
-                <div>
-                    <label for="email">E-mail:</label>
-                    <input type="text" name="email" id="email" />
-                    <span class="error error-email"></span>
-                </div>
-                <div>
-                    <label for="rg">RG:</label>
-                    <input type="text" name="rg" id="rg" />
-                    <span class="error error-rg"></span>
-                </div>
-                <div>
-                    <label for="password">Senha:</label>
-                    <input id="password" name="password" type="password" inputmode="numeric" size="8"/>
-                </div>
-                <div>
-                    <label for="confirm_password">Confirme sua senha:</label>
-                    <input id="confirm_password" type="password" inputmode="numeric" size="8"/>
-                    <span class="error error-senha"></span>
-                </div>
-                <div>
-                    <label>Cep:</label>
-                    <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);"/>
-                    <span class="error error-cep"></span>
-                </div>
-                <div class="container">  
-                    <div class="street large-field">
-                        <label>Rua:</label>
-                        <input name="rua" type="text" id="rua" size="60"/>
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+                    <div class="signup-form">
+                        <form class="mt-3 border p-4 pb-5 shadow" method="get" action="." id="form">
+                            <h4 class="mb-5 text-secondary text-center">Cadastre Aqui</h4>
+                            <div class="row">
+                                <div class="mb-3 col-sm-6">
+                                    <label>Nome</label>
+                                    <input type="text" name="nome" class="form-control" id="name">
+                                </div>
+                                <div class="mb-3 col-sm-6">
+                                    <label>Sobrenome</label>
+                                    <input type="text" name="sobrenome" class="form-control">
+                                </div>
+                                <div class="mb-3 col-md-12">
+                                    <label>Email</label>
+                                    <input type="email" name="email" class="form-control" id="email"
+                                        placeholder="antonio.jose@exemplo.com">
+                                    <span class="text-danger d-block text-center error-email"></span>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label>Senha</label>
+                                    <input type="password" name="senha" class="form-control">
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label>Confirmar Senha</label>
+                                    <input type="password" name="confirmarsenha" class="form-control">
+                                    <span class="text-danger d-block text-center error-senha"></span>
+                                </div>
+                                <div class="mb-3 col-md-12">
+                                    <label>RG</label>
+                                    <input type="text" name="rg" class="form-control" id="rg">
+                                    <span class="text-danger d-block text-center error-rg"></span>
+                                </div>
+                                <div class="mb-3 col-md-12">
+                                    <label>CEP</label>
+                                    <input type="text" name="cep" class="form-control" id="cep"
+                                        onblur="pesquisacep(this.value);" />
+                                    <span class="text-danger d-block text-center error-cep"></span>
+                                </div>
+                                <div class="mb-3 col-9">
+                                    <label>Logradouro</label>
+                                    <input type="text" name="logradouro" class="form-control" id="rua"
+                                        placeholder="Ex: Rua Correia de Lemos">
+                                </div>
+                                <div class="mb-3 col-3">
+                                    <label>Número</label>
+                                    <input type="text" name="numero" class="form-control" id="numero" placeholder="000">
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label>Bairro</label>
+                                    <input type="text" name="bairro" class="form-control" id="bairro">
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label>Complemento</label>
+                                    <input type="text" name="complemento" class="form-control" id="complemento"
+                                        placeholder="Apto 3, terceiro andar">
+                                </div>
+                                <div class="mb-3 col-9">
+                                    <label>Cidade</label>
+                                    <input type="text" name="cidade" class="form-control" id="cidade">
+                                </div>
+                                <div class="mb-3 col-3">
+                                    <label>UF</label>
+                                    <input type="text" name="uf" class="form-control" id="uf">
+                                </div>
+                                <div class="col-md-12">
+                                    <button
+                                        class="btn btn-warning fw-semibold position-absolute start-50 translate-middle-x"
+                                        id="btn">Cadastrar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <p class="text-center mt-3 text-secondary">Já possui conta? <a href="#"
+                                class="text-warning">Entre
+                                agora</a></p>
                     </div>
-                    <div class="number mini-field">
-                        <label>Nº</label>
-                        <input name="numero" type="text" id="numero"/>
-                    </div>   
                 </div>
-                <div class="container">
-                    <div class="complement">
-                        <label>Complemento:</label>
-                        <input name="complemento" type="text" id="complemento"/>
-                    </div>
-                    <div class="district">
-                        <label>Bairro:</label>
-                        <input name="bairro" type="text" id="bairro" size="40" />
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="city large-field">
-                        <label>Cidade:</label>
-                        <input name="cidade" type="text" id="cidade" size="40" />
-                    </div>
-                    <div class="state mini-field">
-                        <label>Estado:</label>
-                        <input name="uf" type="text" id="uf" size="2" />
-                    </div>
-                </div>
-                <button type="submit" id="btn">Inscreva-se</button>
-            </form>
-        </section> 
+            </div>
+        </div>
     </main>
-    <footer></footer>
+
+    <footer class="pt-5 pb-4 bg-black text-center text-light position-relative">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Produto</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, voluptatem iure dolorem
+                        molestias voluptate dolore ab accusamus laudantium excepturi sit reprehenderit possimus. Quam,
+                        sint quo cum voluptatum eaque consequatur exercitationem!</p>
+                </div>
+                <div class="col md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+                    <p><a href="#" class="text-light" style="text-decoration: none;">The Providers</a></p>
+                    <p><a href="#" class="text-light" style="text-decoration: none;">Creativity</a></p>
+                    <p><a href="#" class="text-light" style="text-decoration: none;">Source Files</a></p>
+                    <p><a href="#" class="text-light" style="text-decoration: none;">bootstrap</a></p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Links úteis</h5>
+                    <p><a href="#" class="text-light" style="text-decoration: none;">Sua Conta</a></p>
+                    <p><a href="#" class="text-light" style="text-decoration: none;">Torne-se membro</a></p>
+                    <p><a href="#" class="text-light" style="text-decoration: none;">Planos</a></p>
+                    <p><a href="#" class="text-light" style="text-decoration: none;">Ajuda</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contato</h5>
+                    <p><i class="bi bi-house-fill mx-1"></i>São Paulo</p>
+                    <p><i class="bi bi-envelope-fill mx-1"></i>produto@gmail.com</p>
+                    <p><i class="bi bi-telephone-fill mx-1"></i>11 91234-4567 </p>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="lead">Copyright &copy; 2022 Produto a ser nomeado</p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-right">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="#"><i class="bi bi-instagram h2 text-light"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#"><i class="bi bi-twitter h2 text-light"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#"><i class="bi bi-facebook h2 text-light"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#"><i class="bi bi-linkedin h2 text-light"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="position-absolute bottom-0 end-0 p-3 text-light">
+                <i class="bi bi-arrow-up-circle h1"></i>
+            </a>
+        </div>
+    </footer>
+
     <script src="../js/cep.js"></script>
     <script src="../js/validacao-campos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
