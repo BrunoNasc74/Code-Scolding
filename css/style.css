@@ -75,6 +75,23 @@ body::before {
   transition: none;
 }
 
+.btn-form {
+  background-color: #38ce36;
+  color: #101213;
+  border: thin solid #38ce36;
+}
+.btn-form:hover {
+  background-color: #101213;
+  color: #38ce36;
+  border: thin solid #101213;
+  transition: 250ms;
+}
+.btn-form:active {
+  background-color: #333638;
+  color: #53e051;
+  transition: none;
+}
+
 footer ul .bi {
   color: #f8f9fa;
   display: block;
@@ -83,12 +100,6 @@ footer ul .bi {
 footer ul .bi:hover {
   color: #32e02f;
   transform: scale(1.6);
-}
-
-.img-contatos {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
 }
 
 .img-contatos {
