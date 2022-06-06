@@ -3,3 +3,11 @@ body::before {
   content: '';
   height: 74px;
 }
+
+.logo-navbar {
+  height: 30px;
+}
+
+.logo-footer {
+  height: 180px;
+}
