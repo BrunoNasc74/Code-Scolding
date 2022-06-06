@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="short-cut icon" href="../imagens/logo_simplificada.ico">
+    <title>Code Scolding - Inscreva-se agora em nossa lista de espera!</title>
+</head>
+
+<body class="bg-preto">
+    <header>
+        <nav class="navbar navbar-expand-md bg-preto py-3 fixed-top">
+            <div class="container">
+                <a href="#"><img class="logo-navbar" src="../imagens/logo_simplificada.png" alt="logo"></a>
+                <button class="navbar-toggler btn-nav" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#nav-menu" onclick="this.blur();">
+                    <span class="bi bi-list h1"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nav-menu">
+                    <ul class="navbar-nav ms-auto fw-semibold">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-nav">Preços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-nav">Funcionalidades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-nav">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-nav">Inscrever-se</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-nav">Entrar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="d-flex flex-column align-items-center mt-4">
+                <h1 class="text-branco">Code Scolding</h1>
+                <p class="text-verde text-center">Inscreva-se em nossa lista de espera e seja o primeiro a ser
+                    avisado
+                    no dia do
+                    lançamento!</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+                    <div class="signup-form">
+                        <form class="mt-3 border p-4 pb-5 bg-light rounded-1" method="get" action="." id="form">
+                            <h4 class="mb-5 text-preto text-center">Cadastre Aqui</h4>
+                            <div class="row">
+                                <div class="mb-3 col-sm-6">
+                                    <label>Nome</label>
+                                    <input type="text" name="nome" class="form-control" id="name">
+                                </div>
+                                <div class="mb-3 col-sm-6">
+                                    <label>Sobrenome</label>
+                                    <input type="text" name="sobrenome" class="form-control">
+                                </div>
+                                <div class="mb-3 col-md-12">
+                                    <label>Email</label>
+                                    <input type="email" name="email" class="form-control" id="email"
+                                        placeholder="antonio.jose@exemplo.com">
+                                    <span class="text-danger d-block text-center error-email"></span>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label>Senha</label>
+                                    <input type="password" name="senha" class="form-control">
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label>Confirmar Senha</label>
+                                    <input type="password" name="confirmarsenha" class="form-control">
+                                    <span class="text-danger d-block text-center error-senha"></span>
+                                </div>
+                                <div class="mb-3 col-md-12">
+                                    <label>RG</label>
+                                    <input type="text" name="rg" class="form-control" id="rg">
+                                    <span class="text-danger d-block text-center error-rg"></span>
+                                </div>
+                                <div class="mb-3 col-md-12">
+                                    <label>CEP</label>
+                                    <input type="text" name="cep" class="form-control" id="cep"
+                                        onblur="pesquisacep(this.value);" />
+                                    <span class="text-danger d-block text-center error-cep"></span>
+                                </div>
+                                <div class="mb-3 col-9">
+                                    <label>Logradouro</label>
+                                    <input type="text" name="logradouro" class="form-control" id="rua"
+                                        placeholder="Ex: Rua Correia de Lemos">
+                                </div>
+                                <div class="mb-3 col-3">
+                                    <label>Número</label>
+                                    <input type="text" name="numero" class="form-control" id="numero" placeholder="000">
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label>Bairro</label>
+                                    <input type="text" name="bairro" class="form-control" id="bairro">
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label>Complemento</label>
+                                    <input type="text" name="complemento" class="form-control" id="complemento"
+                                        placeholder="Apto 3, terceiro andar">
+                                </div>
+                                <div class="mb-3 col-9">
+                                    <label>Cidade</label>
+                                    <input type="text" name="cidade" class="form-control" id="cidade">
+                                </div>
+                                <div class="mb-3 col-3">
+                                    <label>UF</label>
+                                    <input type="text" name="uf" class="form-control" id="uf">
+                                </div>
+                                <div class="col-md-12">
+                                    <button
+                                        class="btn btn-form fw-semibold position-absolute start-50 translate-middle-x"
+                                        id="btn" onclick="this.blur();">Cadastrar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <p class="text-center mt-3 text-branco">Já possui conta? <a href="#" class="text-verde">Entre
+                                agora</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pt-5 pb-4 bg-black text-center text-light position-relative">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+                <div class="col-md-12 col-xl-3 mx-auto mt-3 ">
+                    <img class="logo-footer mb-5" src="../imagens/logo_original-trimmy (1).jpg" alt="">
+                </div>
+                <div class="col md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-verde">Products</h5>
+                    <p><a href="#" class="text-light" style="text-decoration: none;">The Providers</a></p>
+                    <p><a href="#" class="text-light" style="text-decoration: none;">Creativity</a></p>
+                    <p><a href="#" class="text-light" style="text-decoration: none;">Source Files</a></p>
+                    <p><a href="#" class="text-light" style="text-decoration: none;">bootstrap</a></p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-verde">Links úteis</h5>
+                    <p><a href="#" class="text-light" style="text-decoration: none;">Sua Conta</a></p>
+                    <p><a href="#" class="text-light" style="text-decoration: none;">Torne-se membro</a></p>
+                    <p><a href="#" class="text-light" style="text-decoration: none;">Planos</a></p>
+                    <p><a href="#" class="text-light" style="text-decoration: none;">Ajuda</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-verde">Contato</h5>
+                    <p><i class="bi bi-house-fill mx-1"></i>São Paulo</p>
+                    <p><i class="bi bi-envelope-fill mx-1"></i>produto@gmail.com</p>
+                    <p><i class="bi bi-telephone-fill mx-1"></i>11 91234-4567</p>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="lead">Copyright &copy; 2022 Code Scolding</p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-right">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="#"><i class="bi bi-instagram h2"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#"><i class="bi bi-twitter h2 mx-1"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#"><i class="bi bi-facebook h2"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="position-absolute bottom-0 end-0 p-3 text-light">
+                <i class="bi bi-arrow-up-circle h1"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="../js/cep.js"></script>
+    <script src="../js/validacao-campos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
