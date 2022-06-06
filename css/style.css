@@ -30,6 +30,9 @@ body::before {
 .text-verde {
   color: #38ce36;
 }
+.text-verde:hover {
+  color: #38ce36;
+}
 .text-branco {
   color: #c6c6c3;
 }
@@ -58,6 +61,7 @@ body::before {
 }
 .btn-branco:hover {
   background-color: #adadad;
+  color: #101213;
   border: thin solid #adadad;
   transition: 250ms;
 }
