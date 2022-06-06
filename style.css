@@ -1,7 +1,88 @@
 body::before {
   display: block;
   content: '';
-  height: 74px;
+  height: 82px;
+}
+
+.logo-navbar {
+  height: 50px;
+}
+.logo-footer {
+  height: 100px;
+}
+
+.bg-preto {
+  background-color: #101213;
+}
+.bg-verde {
+  background-color: #168d14;
+}
+.bg-branco {
+  background-color: #c6c6c3;
+}
+
+.text-nav {
+  color: #f8f9fa;
+}
+.text-nav:hover {
+  color: #32e02f;
+}
+.text-verde {
+  color: #38ce36;
+}
+.text-branco {
+  color: #c6c6c3;
+}
+.text-preto {
+  color: #101213;
+}
+
+.btn-verde {
+  background-color: #38ce36;
+  color: #101213;
+}
+.btn-verde:hover {
+  background-color: transparent;
+  color: #38ce36;
+  transition: 250ms;
+}
+.btn-verde:active {
+  background-color: #38ce36;
+  color: #101213;
+  transition: none;
+}
+
+.btn-branco {
+  background-color: #b8b8b8;
+  color: #101213;
+}
+.btn-branco:hover {
+  background-color: #adadad;
+  border: thin solid #adadad;
+  transition: 250ms;
+}
+.btn-branco:active {
+  background-color: #b8b8b8;
+  border: thin solid #b8b8b8;
+  transition: none;
+}
+
+.btn-nav {
+  color: #f8f9fa;
+  padding: 0 5px;
+}
+.btn-nav:active {
+  transition: none;
+}
+
+footer ul .bi {
+  color: #f8f9fa;
+  display: block;
+  transition: 200ms ease;
+}
+footer ul .bi:hover {
+  color: #32e02f;
+  transform: scale(1.6);
 }
 
 .logo-navbar {
