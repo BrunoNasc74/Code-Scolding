@@ -90,3 +90,9 @@ footer ul .bi:hover {
   height: 200px;
   object-fit: cover;
 }
+
+.img-contatos {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
