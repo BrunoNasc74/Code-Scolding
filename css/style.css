@@ -40,8 +40,7 @@ body::before {
   color: #101213;
 }
 
-.error{
-  margin-top: -33px;
+.error, .success {
   margin-bottom: 20px;
 }
 
