@@ -13,16 +13,23 @@ function validateRg(rg) {
 // Evento de submit do form
 document.getElementById("form").addEventListener("submit", function(e) {
     e.preventDefault()
+    limparErros();
     //Valida E-mail
     const email = document.getElementById("email").value;
     const emailError = document.getElementById("email")
 
     const validaEmail = validateEmail(email);
 
+    const errorEmail = document.querySelector('.error-email')
+
+    console.log(validaEmail, email.length);
+
     if (validaEmail == false && email.length > 0){
-        const errorEmail = document.querySelector('.error-email')
         errorEmail.textContent = 'Digite um e-mail válido!'
         emailError.style.border = '2px solid red'
+    } else {
+        errorEmail.textContent = ''
+        emailError.style.border = 'none'
     }
     
     //Valida senha
@@ -34,18 +41,24 @@ document.getElementById("form").addEventListener("submit", function(e) {
         errorSenha.textContent = 'Senhas diferentes!'
         password.style.border = '2px solid red'
         confirmPassword.style.border = '2px solid red'
+    } else{
+        errorSenha.textContent = ''
+        password.style.border = 'none'
+        confirmPassword.style.border = 'none'
     }
 
     //Valida RG
     const rg = document.getElementById("rg").value;
     const errorRg = document.getElementById("rg");
     const validaRg = validateRg(rg);
+    const rgError = document.querySelector(".error-rg")
 
     if (validaRg == false && rg.length > 0){
-        
-        const rgError = document.querySelector(".error-rg")
         rgError.textContent = 'Digite um RG válido!'
         errorRg.style.border = '2px solid red'
+    } else {
+        rgError.textContent = ''
+        errorRg.style.border = 'none'
     }
     
     const hasError = validadeFields();
@@ -56,9 +69,6 @@ document.getElementById("form").addEventListener("submit", function(e) {
         success.style.color = '#38ce36!important'
         limparForm()
     }
-
-    
-
 
 })
 
@@ -85,5 +95,18 @@ function limparForm(){
 
     for(let i = 0; i < inputs.length; i++) {
         inputs[i].value = '';
+    }
+}
+
+function limparErros() {
+    const inputs = document.querySelectorAll('input:not(#cep)');
+
+    for(let i = 0; i < inputs.length; i++) {
+        if(inputs[i].value.length > 0) {
+            inputs[i].style.border = 'none';
+            if (inputs[i].parentElement.querySelector('span')) {
+                inputs[i].parentElement.querySelector('span').textContent = '';
+            }
+        }
     }
 }

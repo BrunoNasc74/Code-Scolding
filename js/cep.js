@@ -16,14 +16,14 @@ if (!("erro" in conteudo)) {
 } else {
     //CEP não Encontrado.
     limpa_formulário_cep();
-    const inputCep = document.getElementById('cep')
-    const cepInvalido = document.querySelector('.error-cep')
-    cepInvalido.textContent = 'CEP inválido!';
-    inputCep.style.border = '2px solid red';
+    
 
 }};
 
 function pesquisacep(valor) {
+
+const inputCep = document.getElementById('cep')
+const cepInvalido = document.querySelector('.error-cep')
 
 //Nova variável "cep" somente com dígitos.
 var cep = valor.replace(/\D/g, '');
@@ -52,11 +52,11 @@ if (cep != "") {
         //Insere script no documento e carrega o conteúdo.
         document.body.appendChild(script);
 
+        cepInvalido.textContent = '';
+        inputCep.style.border = 'none';
     } else {
         //cep é inválido.
         limpa_formulário_cep();
-        const inputCep = document.getElementById('cep')
-        const cepInvalido = document.querySelector('.error-cep')
         cepInvalido.textContent = 'CEP inválido!';
         inputCep.style.border = '2px solid red';
     };
