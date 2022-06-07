@@ -55,7 +55,10 @@ if (cep != "") {
     } else {
         //cep é inválido.
         limpa_formulário_cep();
-        alert("Formato de CEP inválido.");
+        const inputCep = document.getElementById('cep')
+        const cepInvalido = document.querySelector('.error-cep')
+        cepInvalido.textContent = 'CEP inválido!';
+        inputCep.style.border = '2px solid red';
     };
     
 } else {

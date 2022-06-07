@@ -40,6 +40,11 @@ body::before {
   color: #101213;
 }
 
+.error{
+  margin-top: -33px;
+  margin-bottom: 20px;
+}
+
 .btn-verde {
   background-color: #38ce36;
   color: #101213;

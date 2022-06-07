@@ -55,6 +55,7 @@
                     <div class="signup-form">
                         <form class="mt-3 border p-4 pb-5 bg-light rounded-1" method="get" action="." id="form">
                             <h4 class="mb-5 text-preto text-center">Cadastre Aqui</h4>
+                            <span class="text-danger d-block text-center error"></span>
                             <div class="row">
                                 <div class="mb-3 col-sm-6">
                                     <label>Nome</label>
@@ -65,43 +66,44 @@
                                     <input type="text" name="sobrenome" class="form-control">
                                 </div>
                                 <div class="mb-3 col-md-12">
-                                    <label>Email</label>
-                                    <input type="email" name="email" class="form-control" id="email"
-                                        placeholder="antonio.jose@exemplo.com">
+                                    <label>E-mail</label>
+                                    <input type="text" name="email" class="form-control" id="email"
+                                        placeholder="antonio.jose@exemplo.com" >
                                     <span class="text-danger d-block text-center error-email"></span>
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label>Senha</label>
-                                    <input type="password" name="senha" class="form-control">
+                                    <input id="password" type="password" name="senha" class="form-control" >
+                                    
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label>Confirmar Senha</label>
-                                    <input type="password" name="confirmarsenha" class="form-control">
+                                    <input id="confirm_password" type="password" name="confirmarsenha" class="form-control">
                                     <span class="text-danger d-block text-center error-senha"></span>
                                 </div>
                                 <div class="mb-3 col-md-12">
                                     <label>RG</label>
-                                    <input type="text" name="rg" class="form-control" id="rg">
+                                    <input type="text" name="rg" class="form-control" id="rg" >
                                     <span class="text-danger d-block text-center error-rg"></span>
                                 </div>
                                 <div class="mb-3 col-md-12">
                                     <label>CEP</label>
                                     <input type="text" name="cep" class="form-control" id="cep"
-                                        onblur="pesquisacep(this.value);" />
+                                        onblur="pesquisacep(this.value);" >
                                     <span class="text-danger d-block text-center error-cep"></span>
                                 </div>
                                 <div class="mb-3 col-9">
                                     <label>Logradouro</label>
                                     <input type="text" name="logradouro" class="form-control" id="rua"
-                                        placeholder="Ex: Rua Correia de Lemos">
+                                        placeholder="Ex: Rua Correia de Lemos" >
                                 </div>
                                 <div class="mb-3 col-3">
                                     <label>Número</label>
-                                    <input type="text" name="numero" class="form-control" id="numero" placeholder="000">
+                                    <input type="text" name="numero" class="form-control" id="numero" placeholder="000" >
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label>Bairro</label>
-                                    <input type="text" name="bairro" class="form-control" id="bairro">
+                                    <input type="text" name="bairro" class="form-control" id="bairro" >
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label>Complemento</label>
@@ -110,11 +112,11 @@
                                 </div>
                                 <div class="mb-3 col-9">
                                     <label>Cidade</label>
-                                    <input type="text" name="cidade" class="form-control" id="cidade">
+                                    <input type="text" name="cidade" class="form-control" id="cidade" >
                                 </div>
                                 <div class="mb-3 col-3">
                                     <label>UF</label>
-                                    <input type="text" name="uf" class="form-control" id="uf">
+                                    <input type="text" name="uf" class="form-control" id="uf" >
                                 </div>
                                 <div class="col-md-12">
                                     <button
